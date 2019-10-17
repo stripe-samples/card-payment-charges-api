@@ -5,8 +5,11 @@ The Charges API lets you make a simple card payment in two easy steps.
 If you do business in a country with customers who use cards that may require authentication (e.g. Europe, who recently enacted [Strong Customer Authentication](https://stripe.com/docs/strong-customer-authentication/doineed)), you should use the [Payment Intents API](https://github.com/stripe-samples/web-elements-card-payment) which helps you handle banks' requests for authentication and globally scales with your business by making it easy to accept multiple payment methods.
 Currently the Charges API is recommended for businesses who accept cards only in the United States and Canada.
 
+<img src="./charge-api.gif" alt="A gif of a card payment form accepting a payment" align="center">
+
 **Demo**
 
+See the sample [live](https://1mtjh.sse.codesandbox.io/) in test mode or [fork](https://codesandbox.io/s/stripe-sample-web-card-payment-1mtjh) the Node implementation on CodeSandbox.
 
 Use the `4242424242424242` test card number with any CVC, postal code and future expiration date to trigger a test charge.
 
