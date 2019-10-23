@@ -5,4 +5,5 @@ Before running this app, create an `.env` file and run the sample server by foll
 After running the sample server:
 
 1. Open this folder in your IDE.
-2. Build and run the app using the Android emulator.
+2. Fill in the publishable key in CheckoutActivity.java
+3. Build and run the app using the Android emulator.
