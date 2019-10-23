@@ -23,3 +23,7 @@ target/
 .classpath
 .factorypath
 .project
+
+# iOS files
+xcuserdata/
+Pods/
