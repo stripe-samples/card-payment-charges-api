@@ -35,9 +35,9 @@ import okhttp3.Response;
 
 public class CheckoutActivityJava extends AppCompatActivity {
     /**
-     * This example collects card payments, implementing the guide here: https://stripe.com/docs/payments/accept-a-payment#android
+     * This example collects card payments, implementing the guide here: https://stripe.com/docs/payments/accept-a-payment-charges#android
      * <p>
-     * To run this app, follow the steps here: https://github.com/stripe-samples/mobile-elements-card-payment#how-to-run
+     * To run this app, follow the steps here: https://github.com/stripe-samples/card-payment-charges-api#how-to-run-locally
      */
     // 10.0.2.2 is the Android emulator's alias to localhost
     private static final String BACKEND_URL = "http://10.0.2.2:4242/";
@@ -124,23 +124,20 @@ public class CheckoutActivityJava extends AppCompatActivity {
                               @Nullable String message,
                               boolean restartDemo) {
         Activity activity = this;
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                AlertDialog.Builder builder = new AlertDialog.Builder(activity)
-                        .setTitle(title)
-                        .setMessage(message);
-                if (restartDemo) {
-                    builder.setPositiveButton("Restart demo",
-                            (DialogInterface dialog, int index) -> {
-                                CardInputWidget cardInputWidget = findViewById(R.id.cardInputWidget);
-                                cardInputWidget.clear();
-                            });
-                } else {
-                    builder.setPositiveButton("Ok", null);
-                }
-                builder.create().show();
+        runOnUiThread(() -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(activity)
+                    .setTitle(title)
+                    .setMessage(message);
+            if (restartDemo) {
+                builder.setPositiveButton("Restart demo",
+                        (DialogInterface dialog, int index) -> {
+                            CardInputWidget cardInputWidget = findViewById(R.id.cardInputWidget);
+                            cardInputWidget.clear();
+                        });
+            } else {
+                builder.setPositiveButton("Ok", null);
             }
+            builder.create().show();
         });
     }
 }
