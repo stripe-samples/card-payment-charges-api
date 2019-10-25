@@ -10,7 +10,10 @@ Currently the Charges API is recommended for businesses who accept cards only in
 **Demo**
 
 Web: See the sample [live](https://1mtjh.sse.codesandbox.io/) in test mode or [fork](https://codesandbox.io/s/stripe-sample-web-card-payment-1mtjh) the Node implementation on CodeSandbox.
-iOS and Android: Clone this repo and run the sample server and app locally (see below).
+
+iOS and Android: 
+1. Clone this repo and run the sample server locally (see below).  
+2. Then, navigate to the `client/ios` or `client/android` directory and follow the README there.
 
 Use the `4242424242424242` test card number with any CVC, postal code and future expiration date to trigger a test charge.
 
@@ -43,4 +46,5 @@ Q: Can you show me how to build X?
 A: We are always looking for new sample ideas, please email dev-samples@stripe.com with your suggestion!
 
 ## Author(s)
-[@adreyfus-stripe](https://twitter.com/adrind)
+- [@adreyfus-stripe](https://twitter.com/adrind)
+- [@yuki-stripe](https://github.com/yuki-stripe)
