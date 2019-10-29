@@ -1,0 +1,11 @@
+{
+  "name": "card-payment-charges-api",
+  "configureDotEnv": true,
+  "integrations": [
+    {
+      "name": "main",
+      "clients": ["web", "android", "ios"],
+      "servers": ["java", "node", "php-slim", "php", "python", "ruby"]
+    }
+  ]
+}
