@@ -5,8 +5,7 @@ require 'sinatra'
 require 'dotenv'
 
 # Replace if using a different env file or config
-ENV_PATH = './.env'
-Dotenv.load(File.dirname(__FILE__) + ENV_PATH)
+Dotenv.load
 Stripe.api_key = ENV['STRIPE_SECRET_KEY']
 
 set :static, true
@@ -28,9 +27,9 @@ end
 
 get '/stripe-key' do
   content_type 'application/json'
-  # Send public key to client
+  # Send publishable key to client
   {
-    publicKey: ENV['STRIPE_PUBLIC_KEY']
+    publicKey: ENV['STRIPE_PUBLISHABLE_KEY']
   }.to_json
 end
 
