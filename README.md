@@ -22,19 +22,22 @@ Use the `4000000000000002` test card number with any CVC, postal code and future
 Read more about testing on Stripe at https://stripe.com/docs/testing.
 
 
-## How to run locally
+## How to run the server locally
 This sample includes 5 server implementations in Node, Ruby, Python, Java, and PHP. 
 
-If you want to run the sample locally copy the .env.example file to your own .env file: 
+Copy the .env.example file into a file named .env in the folder of the server you want to use. For example:
 
 ```
 cp .env.example .env
 ```
 
+You will need a Stripe account in order to run the demo. Once you set up your account, go to the Stripe [developer dashboard](https://stripe.com/docs/development#api-keys) to find your API keys.
+
+```
+STRIPE_PUBLISHABLE_KEY=<replace-with-your-publishable-key>
+STRIPE_SECRET_KEY=<replace-with-your-secret-key>
+```
 Then follow the instructions in the server directory to run.
-
-You will need a Stripe account with its own set of [API keys](https://stripe.com/docs/development#api-keys).
-
 
 ## FAQ
 Q: Why did you pick these frameworks?
